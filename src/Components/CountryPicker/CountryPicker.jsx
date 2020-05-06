@@ -9,13 +9,27 @@ const CountryPicker = ({ handleCountryChange }) => {
 
     const [countries, setCountries] = useState([]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3bb318ab53474014ef7f16c137105cb6496bbdc8
     useEffect(() => {
         const fetchCountries = async () => {
             setCountries(await getCountries());
         }
+<<<<<<< HEAD
         fetchCountries();
     }, [setCountries]);
 
+=======
+
+        fetchCountries();
+    }, [setCountries]);
+
+
+    console.log(countries)
+
+>>>>>>> 3bb318ab53474014ef7f16c137105cb6496bbdc8
     return (
         <div className={styles.container}>
             <FormControl className={styles.formControl}>

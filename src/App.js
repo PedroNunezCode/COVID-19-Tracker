@@ -13,6 +13,7 @@ import { fetchData } from './api';
 
 function App() {
 
+<<<<<<< HEAD
   /**
    * The following state variables will be used to keep track of the data that needs to
    * be displayed along with the country if one is selected.
@@ -25,6 +26,11 @@ function App() {
    *  the response equal to the state variable of "data". Anytime the setData function is triggered,
    * this hook will refetch the required data to be displayed.
    */
+=======
+  const [data, setData] = useState({});
+  const [country, setCountry] = useState();
+
+>>>>>>> 3bb318ab53474014ef7f16c137105cb6496bbdc8
   useEffect(() => {
     async function getAPIData() {
       setData(await fetchData());
@@ -33,10 +39,13 @@ function App() {
     getAPIData();
   }, [setData]);
 
+<<<<<<< HEAD
   /**
    * This callback function will handle changing the country which a user selects. It will be set 
    * with the setData state variable and tigger the useEffect hook once more to re-fetch the api. 
    */
+=======
+>>>>>>> 3bb318ab53474014ef7f16c137105cb6496bbdc8
   const handleCountryChange = async (country) => {
      setData(await fetchData(country));
      setCountry(country);
